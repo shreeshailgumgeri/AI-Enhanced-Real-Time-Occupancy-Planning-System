@@ -1,6 +1,6 @@
 # AI-Enhanced Real-Time Occupancy Planning System
 
-This prototype implements a Natural Language Interface for the Occupancy Query system that integrates VergeSense sensor data with AI models to provide intelligent workspace recommendations based on natural language requests.
+This prototype implements a Natural Language Interface for an Occupancy Query system that integrates VergeSense sensor data with AI models to provide intelligent workspace recommendations based on natural language requests.
 
 ## Project Overview
 
@@ -70,6 +70,17 @@ The system uses three primary data models:
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/vergesense-nlp-query.git
-   cd vergesense-nlp-query
+   git clone https://github.com/shreeshailgumgeri/AI-Enhanced-Real-Time-Occupancy-Planning-System.git
+   cd AI-Enhanced-Real-Time-Occupancy-Planning-System
+2. Create a virtual environment and install dependencies:
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+3. Create a .env file with your API keys:
+   VERGESENSE_API_KEY=your_vergesense_api_key
+   VERGESENSE_API_URL=https://api.vergesense.com
+   OPENAI_API_KEY=your_openai_api_key
+   ANTHROPIC_API_KEY=your_anthropic_api_key
+   DATABASE_URL=sqlite:///./occupancy.db
+4. Initialize the database with sample data:
+   python -m app.db.init_data
