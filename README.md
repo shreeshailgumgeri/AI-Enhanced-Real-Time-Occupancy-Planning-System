@@ -17,7 +17,9 @@ The system allows employees to query available desks using natural language (e.g
 - **Simple Web Interface**: Demonstration UI for easy testing
 
 ## System Architecture
-![Architecture Diagram](ArchitectureDiagram.png)
+- <a href="ArchitectureDiagram.png" target="_blank">
+   <img src="ArchitectureDiagram.png" alt="Architecture Diagram" style="width:60%; max-width:600px;">
+</a>
 
 This system consists of these core components:
 
@@ -71,17 +73,28 @@ The system uses three primary data models:
 ### Installation
 
 1. Clone the repository:
+   ```bash
    git clone https://github.com/shreeshailgumgeri/AI-Enhanced-Real-Time-Occupancy-Planning-System.git
    cd AI-Enhanced-Real-Time-Occupancy-Planning-System
+   ```
+
 2. Create a virtual environment and install dependencies:
+   ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    pip install -r requirements.txt
-3. Create a .env file with your API keys:
+   ```
+
+3. Create a `.env` file with your API keys:
+   ```env
    VERGESENSE_API_KEY=your_vergesense_api_key
    VERGESENSE_API_URL=https://api.vergesense.com
    OPENAI_API_KEY=your_openai_api_key
    ANTHROPIC_API_KEY=your_anthropic_api_key
    DATABASE_URL=sqlite:///./occupancy.db
+   ```
+
 4. Initialize the database with sample data:
+   ```bash
    python -m app.db.init_data
+   ```
