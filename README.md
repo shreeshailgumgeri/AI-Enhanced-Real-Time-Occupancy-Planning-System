@@ -17,6 +17,7 @@ The system allows employees to query available desks using natural language (e.g
 - **Simple Web Interface**: Demonstration UI for easy testing
 
 ## System Architecture
+![Architecture Diagram](ArchitectureDiagram.png)
 
 This system consists of these core components:
 
